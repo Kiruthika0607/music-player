@@ -1,0 +1,176 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify-Inspired Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="music-player">
+        <div class="player-container">
+            <!-- Header -->
+            <div class="player-header">
+                <div class="logo">
+                     
+                    <span>Music Player</span>
+                </div>
+                <div class="now-playing">Now Playing</div>
+                <div class="user-profile">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY1lcYaecBUedetDgW9ejS2RDhEYrjfK4pBg&s" alt="User Avatar">
+                    <span>kichu</span>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="player-main">
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <ul class="nav-menu">
+                        <li class="nav-item active">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </li>
+                        <li class="nav-item">
+                            <i class="fas fa-search"></i>
+                            <span>Search</span>
+                        </li>
+                        <li class="nav-item">
+                            <i class="fas fa-book"></i>
+                            <span>Your Library</span>
+                        </li>
+                        <li class="nav-item">
+                            <i class="fas fa-plus-square"></i>
+                            <span>Create Playlist</span>
+                        </li>
+                        <li class="nav-item">
+                            <i class="fas fa-heart"></i>
+                            <span>Liked Songs</span>
+                        </li>
+                    </ul>
+
+                    <div class="playlists">
+                        <div class="playlist-title">Playlists</div>
+                        <div class="playlist-item">Discover Weekly</div>
+                        <div class="playlist-item">Release Radar</div>
+                        <div class="playlist-item">Daily Mix 1</div>
+                        <div class="playlist-item">Daily Mix 2</div>
+                        <div class="playlist-item">Chill Vibes</div>
+                        <div class="playlist-item">Workout Energy</div>
+                    </div>
+                </div>
+
+                <!-- Content Area -->
+                <div class="content-area">
+                    <div class="current-album">
+                        <div class="album-cover" id="albumCover">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoB4UYyplYbs5q_FcwLugiTiKdAGoWs-YgoQ&s" alt="Album Cover">
+                        </div>
+                        <div class="album-info">
+                            <div class="album-type">Album</div>
+                            <div class="album-name">Idhu Naal </div>
+                            <div class="album-artist">
+                                By <a href="#">Aditya Rao, jonita Gandhi</a> • 2017
+                            </div>
+                            <div class="album-meta">
+                                <span><i class="far fa-clock"></i> 42 min</span>
+                                <span><i class="fas fa-music"></i> 12 tracks</span>
+                                <span><i class="far fa-eye"></i> 2.5M views</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="track-list">
+                        <div class="track-header">
+                            <div>#</div>
+                            <div>Title</div>
+                            <div>Duration</div>
+                            <div><i class="far fa-heart"></i></div>
+                        </div>
+
+                        <div class="track-item playing">
+                            <div class="track-number">1</div>
+                            <div class="track-name">Idhu Naal</div>
+                            <div class="track-duration">3:45</div>
+                            <div class="track-like"><i class="fas fa-heart"></i></div>
+                        </div>
+
+                        <div class="track-item">
+                            <div class="track-number">2</div>
+                            <div class="track-name">Uraintheney</div>
+                            <div class="track-duration">4:12</div>
+                            <div class="track-like"><i class="far fa-heart"></i></div>
+                        </div>
+
+                        <div class="track-item">
+                            <div class="track-number">3</div>
+                            <div class="track-name">En Usure</div>
+                            <div class="track-duration">3:58</div>
+                            <div class="track-like"><i class="far fa-heart"></i></div>
+                        </div>
+
+                        <div class="track-item">
+                            <div class="track-number">4</div>
+                            <div class="track-name">Neenaade Naa</div>
+                            <div class="track-duration">4:32</div>
+                            <div class="track-like"><i class="far fa-heart"></i></div>
+                        </div>
+
+                        <div class="track-item">
+                            <div class="track-number">5</div>
+                            <div class="track-name">Premavathi</div>
+                            <div class="track-duration">3:21</div>
+                            <div class="track-like"><i class="far fa-heart"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Player Controls -->
+            <div class="player-controls">
+                <div class="progress-area">
+                    <div class="current-time">1:24</div>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                        <div class="progress-handle"></div>
+                    </div>
+                    <div class="total-time">3:45</div>
+                </div>
+
+                <div class="control-buttons">
+                    <button class="control-btn" id="shuffleBtn">
+                        <i class="fas fa-random"></i>
+                    </button>
+                    <button class="control-btn" id="prevBtn">
+                        <i class="fas fa-step-backward"></i>
+                    </button>
+                    <button class="control-btn play-pause" id="playPauseBtn">
+                        <i class="fas fa-pause"></i>
+                    </button>
+                    <button class="control-btn" id="nextBtn">
+                        <i class="fas fa-step-forward"></i>
+                    </button>
+                    <button class="control-btn" id="repeatBtn">
+                        <i class="fas fa-redo"></i>
+                    </button>
+                </div>
+
+                <div class="extra-controls">
+                    <div class="device-info">
+                        <i class="fas fa-laptop"></i>
+                        <span>This Web Player</span>
+                    </div>
+                    <div class="volume-control">
+                        <i class="fas fa-volume-up"></i>
+                        <div class="volume-bar">
+                            <div class="volume-level"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
